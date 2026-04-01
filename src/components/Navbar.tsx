@@ -16,11 +16,11 @@ export function Navbar() {
   });
 
   const navLinks = [
-    { name: "Umrah Packages", href: "#packages" },
-    { name: "Hajj Packages", href: "#packages" },
-    { name: "Offers", href: "#offers" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Umrah Packages", href: "/umrah-packages" },
+    { name: "Hajj Packages", href: "/hajj-packages" },
+    { name: "Offers", href: "/offers" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (

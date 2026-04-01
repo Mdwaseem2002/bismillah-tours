@@ -5,6 +5,9 @@ import { Providers } from '@/components/Providers';
 import { CustomCursor } from '@/components/CustomCursor';
 import { PageLoader } from '@/components/PageLoader';
 import { ScrollProgress } from '@/components/ScrollProgress';
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -36,7 +39,10 @@ export default function RootLayout({
           <CustomCursor />
           <PageLoader />
           <ScrollProgress />
+          <Navbar />
           {children}
+          <Footer />
+          <WhatsAppButton />
         </Providers>
       </body>
     </html>

@@ -4,17 +4,17 @@ import { motion } from "framer-motion";
 
 export function Footer() {
   const quickLinks = [
-    { name: "About Us", href: "#about" },
-    { name: "How It Works", href: "#process" },
-    { name: "Testimonials", href: "#testimonials" },
-    { name: "Pilgrim Resources", href: "#blog" },
+    { name: "About Us", href: "/about" },
+    { name: "Special Offers", href: "/offers" },
+    { name: "Contact", href: "/contact" },
+    { name: "Hajj Packages", href: "/hajj-packages" },
   ];
 
   const packagesLinks = [
-    { name: "Executive Umrah", href: "#packages" },
-    { name: "VIP Umrah", href: "#packages" },
-    { name: "Hajj 2025 Registrations", href: "#packages" },
-    { name: "Ramadan Specials", href: "#offers" },
+    { name: "Executive Umrah", href: "/umrah-packages" },
+    { name: "VIP Umrah", href: "/umrah-packages" },
+    { name: "Hajj 2025", href: "/hajj-packages" },
+    { name: "Special Offers", href: "/offers" },
   ];
 
   const containerVariants = {
