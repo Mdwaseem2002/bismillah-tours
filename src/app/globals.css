@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-green-dark: #1B4332;
+  --color-green-mid: #2D6A4F;
+  --color-gold: #C9A84C;
+  --color-gold-light: #E0C068;
+  --color-cream: #F5F0E8;
+  --color-cream-dark: #EDE8DC;
+  --color-charcoal: #1A1A1A;
+
+  --color-background: var(--color-cream);
+  --color-foreground: var(--color-charcoal);
+
+  --font-display: var(--font-display), "Cormorant Garamond", serif;
+  --font-body: var(--font-body), "Plus Jakarta Sans", sans-serif;
+}
+
+:root {
+  --background: var(--color-cream);
+  --foreground: var(--color-charcoal);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* To keep the spiritual luxury feel, we won't strictly flip black/white unless needed, 
+       but we provide the dark theme fallback in case of strict dark mode preference */
+    --background: var(--color-green-dark);
+    --foreground: var(--color-cream);
+  }
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-body);
+  /* smooth scrolling */
+  scroll-behavior: smooth;
+}
+
+/* Utilities for marquee animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+/* Background patterns */
+.bg-islamic-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l5.8 24.2L60 30l-24.2 5.8L30 60l-5.8-24.2L0 30l24.2-5.8z' fill='%23C9A84C' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.bg-dot-grid {
+  background-image: radial-gradient(var(--color-gold) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-color: var(--color-cream);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  html, body, * {
+    cursor: none !important;
+  }
+}
+
+* { 
+  box-sizing: border-box; 
+}
+
+::selection { 
+  background: rgba(201,168,76,0.25); 
+}
